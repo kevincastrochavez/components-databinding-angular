@@ -39,48 +39,48 @@ export class ServerElementComponent
   @ViewChild("heading") header: ElementRef;
   @ContentChild("contentParagraph") paragraph: ElementRef;
 
-  constructor() {
-    console.log("Constructor call");
-  }
+  // constructor() {
+  //   console.log("Constructor call");
+  // }
 
-  // If you want to react to any changes and then do something with the old values, like store them
-  ngOnChanges(changes: SimpleChanges) {
-    console.log("onChanges call");
-    console.log(changes);
-  }
+  // // If you want to react to any changes and then do something with the old values, like store them
+  // ngOnChanges(changes: SimpleChanges) {
+  //   console.log("onChanges call");
+  //   console.log(changes);
+  // }
 
-  ngOnInit(): void {
-    console.log("ngOnInit call");
-    // console.log(this.paragraph.nativeElement.textContent);
+  // ngOnInit(): void {
+  //   console.log("ngOnInit call");
+  //   // console.log(this.paragraph.nativeElement.textContent);
 
-    // console.log(this.header.nativeElement.textContent);
-  }
+  //   // console.log(this.header.nativeElement.textContent);
+  // }
 
-  // Runs on every little change, useful for changing something manually
-  ngDoCheck() {
-    console.log("ngDoCheck call");
-  }
+  // // Runs on every little change, useful for changing something manually
+  // ngDoCheck() {
+  //   console.log("ngDoCheck call");
+  // }
 
-  ngAfterContentInit() {
-    console.log("ngAfterContentInit call");
-    // console.log(this.paragraph.nativeElement.textContent);
-  }
+  // ngAfterContentInit() {
+  //   console.log("ngAfterContentInit call");
+  //   // console.log(this.paragraph.nativeElement.textContent);
+  // }
 
-  ngAfterContentChecked() {
-    console.log("ngAfterContentChecked call");
-  }
+  // ngAfterContentChecked() {
+  //   console.log("ngAfterContentChecked call");
+  // }
 
-  // You can check the value of an HTML element at this point because it is when renders
-  ngAfterViewInit() {
-    console.log("ngAfterViewInit call");
-    // console.log(this.header.nativeElement.textContent);
-  }
+  // // You can check the value of an HTML element at this point because it is when renders
+  // ngAfterViewInit() {
+  //   console.log("ngAfterViewInit call");
+  //   // console.log(this.header.nativeElement.textContent);
+  // }
 
-  ngAfterViewChecked() {
-    console.log("ngAfterViewChecked call");
-  }
+  // ngAfterViewChecked() {
+  //   console.log("ngAfterViewChecked call");
+  // }
 
-  ngOnDestroy() {
-    console.log("ngOnDestroy call");
-  }
+  // ngOnDestroy() {
+  //   console.log("ngOnDestroy call");
+  // }
 }
