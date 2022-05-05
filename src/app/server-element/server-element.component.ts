@@ -11,6 +11,8 @@ import {
   AfterViewInit,
   AfterViewChecked,
   OnDestroy,
+  ViewChild,
+  ElementRef,
 } from "@angular/core";
 
 @Component({
@@ -33,6 +35,7 @@ export class ServerElementComponent
 {
   @Input("srvElement") element: { type: string; name: string; content: string };
   @Input() name: string;
+  @ViewChild("heading") header: ElementRef;
 
   constructor() {
     console.log("Constructor call");
@@ -46,6 +49,7 @@ export class ServerElementComponent
 
   ngOnInit(): void {
     console.log("ngOnInit call");
+    console.log(this.header.nativeElement.textContent);
   }
 
   // Runs on every little change, useful for changing something manually
@@ -61,8 +65,10 @@ export class ServerElementComponent
     console.log("ngAfterContentChecked call");
   }
 
+  // You can check the value of an HTML element at this point because it is when renders
   ngAfterViewInit() {
     console.log("ngAfterViewInit call");
+    console.log(this.header.nativeElement.textContent);
   }
 
   ngAfterViewChecked() {
